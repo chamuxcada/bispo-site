@@ -2,150 +2,160 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>BISPO — Design Autoral</title>
-
-  <!-- SEO -->
-  <meta name="description" content="BISPO. Design autoral. Edições limitadas. Nada além do essencial." />
-  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Animate -->
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css"/>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    :root {
-      --bg: #000;
-      --text: #fff;
-      --muted: #9a9a9a;
-      --accent: #ffffff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #0a0a0a;
+      color: #ffffff;
       letter-spacing: 0.02em;
-      line-height: 1.6;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
+    /* HEADER */
     header {
-      padding: 32px 64px;
+      padding: 24px 64px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #111;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
     }
 
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.2em;
+    header img {
+      height: 36px;
     }
 
     nav a {
       margin-left: 32px;
-      font-size: 14px;
-      color: var(--muted);
+      font-weight: 500;
+      opacity: 0.8;
     }
 
     nav a:hover {
-      color: var(--text);
+      opacity: 1;
     }
 
+    /* HERO */
     .hero {
-      padding: 120px 64px;
-      max-width: 1200px;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 24px;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+    }
+
+    .hero-content img {
+      width: 180px;
+      margin-bottom: 32px;
     }
 
     .hero h1 {
-      font-size: 56px;
-      font-weight: 600;
-      max-width: 720px;
-      line-height: 1.2;
+      font-size: 3.2rem;
+      font-weight: 800;
+      max-width: 900px;
+      margin: 0 auto 24px;
     }
 
     .hero p {
-      margin-top: 24px;
-      color: var(--muted);
-      max-width: 520px;
+      font-size: 1.1rem;
+      opacity: 0.75;
+      margin-bottom: 48px;
     }
 
     .hero .cta {
-      margin-top: 48px;
       display: inline-block;
-      padding: 14px 32px;
-      border: 1px solid var(--text);
-      font-size: 14px;
-      letter-spacing: 0.15em;
-      transition: 0.3s;
+      padding: 16px 40px;
+      border: 1px solid #fff;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
     .hero .cta:hover {
-      background: var(--text);
-      color: var(--bg);
+      background: #fff;
+      color: #000;
     }
 
+    /* SECTION */
     section {
       padding: 120px 64px;
-      border-top: 1px solid #111;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 48px;
-      max-width: 1200px;
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 24px;
     }
 
-    .card h3 {
-      font-size: 16px;
-      margin-bottom: 12px;
-      font-weight: 500;
+    .section-text {
+      max-width: 700px;
+      font-size: 1rem;
+      opacity: 0.8;
     }
 
-    .card p {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .manifesto {
-      font-size: 32px;
-      max-width: 800px;
-      line-height: 1.3;
-    }
-
+    /* FOOTER */
     footer {
+      background: #ffffff;
+      color: #000;
       padding: 64px;
-      border-top: 1px solid #111;
-      font-size: 12px;
-      color: var(--muted);
       display: flex;
       justify-content: space-between;
+      align-items: center;
+    }
+
+    footer img {
+      height: 32px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.7;
     }
 
     @media (max-width: 768px) {
-      header, section, .hero, footer {
-        padding: 48px 24px;
+      header {
+        padding: 16px 24px;
+      }
+
+      nav {
+        display: none;
       }
 
       .hero h1 {
-        font-size: 40px;
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 80px 24px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 24px;
       }
     }
   </style>
@@ -155,57 +165,49 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">BISPO</div>
+    <!-- LOGO BRANCA -->
+    <img src="assets/VETOR 3X3 BRANCA SEM FUNDO.png" alt="BISPO Logo Branca">
     <nav>
-      <a href="#colecao">Coleção</a>
-      <a href="#conceito">Conceito</a>
+      <a href="#manifesto">Manifesto</a>
+      <a href="#drops">Drops</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <main class="hero">
-    <h1>Design autoral.<br>Nada além do essencial.</h1>
-    <p>
-      Edições limitadas. Produção consciente. Cada peça existe por um motivo.
-    </p>
-    <a href="#colecao" class="cta">VER DROP</a>
-  </main>
-
-  <!-- DIFERENCIAIS -->
-  <section id="conceito">
-    <div class="grid">
-      <div class="card">
-        <h3>Design Autoral</h3>
-        <p>Não seguimos tendências. Criamos identidade.</p>
-      </div>
-      <div class="card">
-        <h3>Edições Limitadas</h3>
-        <p>Até 30 unidades por modelo. Sem reposição.</p>
-      </div>
-      <div class="card">
-        <h3>Acabamento Premium</h3>
-        <p>Tecidos, cortes e detalhes pensados no longo prazo.</p>
-      </div>
-      <div class="card">
-        <h3>Certificado</h3>
-        <p>Cada peça é numerada e autenticada.</p>
-      </div>
+  <section class="hero">
+    <div class="hero-content animate__animated animate__fadeInUp">
+      <!-- LOGO BRANCA HERO -->
+      <img src="assets/VETOR 3X3 BRANCA SEM FUNDO.png" alt="BISPO Logo">
+      <h1>Design autoral. Nada além do essencial.</h1>
+      <p>Edições limitadas. Sem reposição. Criado para poucos.</p>
+      <a href="#drops" class="cta">Ver drops disponíveis</a>
     </div>
   </section>
 
   <!-- MANIFESTO -->
-  <section>
-    <p class="manifesto">
-      Não competimos por volume.<br>
-      Competimos por significado.
+  <section id="manifesto">
+    <h2 class="section-title">Menos peças. Mais significado.</h2>
+    <p class="section-text">
+      A BISPO não segue tendências. Criamos produtos com identidade, propósito e limite.
+      Cada peça é numerada. Cada drop é final. Cada detalhe importa.
+    </p>
+  </section>
+
+  <!-- DROPS -->
+  <section id="drops">
+    <h2 class="section-title">Drops limitados</h2>
+    <p class="section-text">
+      Produções restritas a 30 unidades por modelo.  
+      Sem reposição. Sem excesso. Sem concessões.
     </p>
   </section>
 
   <!-- FOOTER -->
-  <footer id="contato">
-    <span>© BISPO — Todos os direitos reservados</span>
-    <span>Instagram · Contato</span>
+  <footer>
+    <!-- LOGO PRETA -->
+    <img src="assets/VETOR 3X3 PRETA SEM FUNDO.png" alt="BISPO Logo Preta">
+    <p>© BISPO — Todos os direitos reservados</p>
   </footer>
 
 </body>
