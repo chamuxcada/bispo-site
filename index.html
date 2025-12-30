@@ -1,124 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <title>BISPO — Design autoral</title>
+    <meta charset="utf-8" />
+    <title>BISPO — Design Autoral</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="BISPO — Camisas autorais em edições limitadas. Design, futebol e cultura." />
+    <meta name="description" content="BISPO. Camisas autorais em edições limitadas. Nada além do essencial." />
 
-    <!-- Fonte -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-
     <style>
       body {
         margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #0d0d0d;
+        font-family: Inter, sans-serif;
+        background: #0e0e0e;
         color: #ffffff;
       }
 
       header {
+        padding: 32px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 24px 48px;
+        justify-content: center;
       }
 
       header img {
-        height: 32px;
-      }
-
-      nav a {
-        margin-left: 24px;
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 14px;
-        opacity: 0.8;
-      }
-
-      nav a:hover {
-        opacity: 1;
+        height: 48px;
       }
 
       .hero {
-        padding: 120px 48px;
-        max-width: 900px;
+        text-align: center;
+        padding: 120px 24px;
       }
 
       .hero h1 {
         font-size: 48px;
         font-weight: 600;
         line-height: 1.2;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
       }
 
       .hero p {
         font-size: 18px;
-        opacity: 0.8;
+        color: #b5b5b5;
         max-width: 520px;
+        margin: 0 auto;
       }
 
       .cta {
-        margin-top: 40px;
+        margin-top: 48px;
       }
 
       .cta a {
         display: inline-block;
-        margin-right: 24px;
-        padding: 12px 28px;
+        padding: 14px 28px;
         border: 1px solid #ffffff;
-        text-decoration: none;
         color: #ffffff;
-        font-size: 14px;
-      }
-
-      section {
-        padding: 96px 48px;
-        max-width: 1000px;
-      }
-
-      h2 {
-        font-size: 32px;
+        text-decoration: none;
         font-weight: 500;
-        margin-bottom: 32px;
+        transition: 0.3s;
       }
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 32px;
-      }
-
-      .card {
-        border-top: 1px solid #333;
-        padding-top: 16px;
-        font-size: 14px;
-        opacity: 0.85;
-      }
-
-      .manifesto {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 1.3;
+      .cta a:hover {
+        background: #ffffff;
+        color: #000000;
       }
 
       footer {
-        padding: 48px;
-        border-top: 1px solid #222;
-        font-size: 12px;
-        opacity: 0.6;
-      }
-
-      footer img {
-        height: 28px;
-        margin-bottom: 16px;
+        padding: 40px 24px;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
       }
     </style>
   </head>
@@ -126,53 +85,28 @@
   <body>
     <!-- HEADER -->
     <header>
-      <img src="assets/logo-bispo-branca.png" alt="BISPO Logo" />
-      <nav>
-        <a href="#">Drop Atual</a>
-        <a href="#">Manifesto</a>
-        <a href="#">Sobre</a>
-        <a href="#">FAQ</a>
-      </nav>
+      <img
+        src="./assets/logo-bispo-branca.png"
+        alt="BISPO"
+      />
     </header>
 
     <!-- HERO -->
     <section class="hero">
       <h1>Design autoral.<br />Nada além do essencial.</h1>
       <p>
-        Camisas inspiradas na cultura do futebol. Criadas em edições limitadas.
+        Camisas inspiradas na cultura do futebol.<br />
+        Criadas em edições limitadas.
       </p>
 
       <div class="cta">
         <a href="#">Ver o Drop Atual</a>
-        <a href="#">Conheça a BISPO</a>
       </div>
-    </section>
-
-    <!-- POR QUE BISPO -->
-    <section>
-      <h2>Por que BISPO</h2>
-      <div class="grid">
-        <div class="card">Design 100% autoral</div>
-        <div class="card">Edições limitadas (30 unidades)</div>
-        <div class="card">Sem reposição</div>
-        <div class="card">Acabamento premium</div>
-        <div class="card">Certificado de autenticidade</div>
-        <div class="card">Produção nacional</div>
-      </div>
-    </section>
-
-    <!-- MANIFESTO -->
-    <section>
-      <p class="manifesto">
-        Não seguimos o mercado.<br />
-        Criamos o nosso.
-      </p>
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <img src="assets/logo-bispo-preta.png" alt="BISPO Logo" />
-      <div>BISPO — Design autoral em edições limitadas.</div>
+      © BISPO — Edições limitadas.
     </footer>
   </body>
 </html>
