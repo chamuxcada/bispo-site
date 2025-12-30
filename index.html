@@ -1,112 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <title>BISPO — Design autoral. Nada além do essencial.</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>BISPO — Design Autoral</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="BISPO. Camisas autorais inspiradas no futebol. Edições limitadas. Sem reposição." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="BISPO" />
-    <meta property="og:description" content="Design autoral. Nada além do essencial." />
-    <meta property="og:type" content="website" />
+  <!-- Animate -->
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css"/>
 
-    <!-- RESET -->
-    <style data-tag="reset-style-sheet">
-      html { line-height: 1.15; }
-      body { margin: 0; }
-      * {
-        box-sizing: border-box;
-        border-width: 0;
-        border-style: solid;
-        -webkit-font-smoothing: antialiased;
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      padding: 24px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    header img {
+      height: 36px;
+    }
+
+    nav a {
+      margin-left: 32px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 24px;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+    }
+
+    .hero-content img {
+      width: 180px;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      max-width: 900px;
+      margin: 0 auto 24px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.75;
+      margin-bottom: 48px;
+    }
+
+    .hero .cta {
+      display: inline-block;
+      padding: 16px 40px;
+      border: 1px solid #fff;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .hero .cta:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* SECTION */
+    section {
+      padding: 120px 64px;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .section-text {
+      max-width: 700px;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #ffffff;
+      color: #000;
+      padding: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer img {
+      height: 32px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 24px;
       }
-      p, h1, h2, h3, h4, h5, h6 {
-        margin: 0;
-        padding: 0;
+
+      nav {
+        display: none;
       }
-      img {
-        display: block;
-        max-width: 100%;
+
+      .hero h1 {
+        font-size: 2.2rem;
       }
-      a {
-        text-decoration: none;
-        color: inherit;
+
+      section {
+        padding: 80px 24px;
       }
-    </style>
 
-    <!-- DEFAULT -->
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter, sans-serif;
-        font-size: 16px;
+      footer {
+        flex-direction: column;
+        gap: 24px;
       }
-      body {
-        background-color: #0b0b0b;
-        color: #ffffff;
-        line-height: 1.6;
-        letter-spacing: 0.02em;
-      }
-    </style>
+    }
+  </style>
+</head>
 
-    <!-- STYLES -->
-    <link rel="stylesheet" href="css/style.css" />
+<body>
 
-    <!-- FONTS -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    />
+  <!-- HEADER -->
+  <header>
+    <!-- LOGO BRANCA -->
+    <img src="assets/logo-bispo-branca.png" alt="BISPO Logo Branca">
+    <nav>
+      <a href="#manifesto">Manifesto</a>
+      <a href="#drops">Drops</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <!-- ANIMATIONS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content animate__animated animate__fadeInUp">
+      <!-- LOGO BRANCA HERO -->
+      <img src="assets/logo-bispo-branca.png" alt="BISPO Logo">
+      <h1>Design autoral. Nada além do essencial.</h1>
+      <p>Edições limitadas. Sem reposição. Criado para poucos.</p>
+      <a href="#drops" class="cta">Ver drops disponíveis</a>
+    </div>
+  </section>
 
-    <!-- TELEPORTHQ -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-  </head>
+  <!-- MANIFESTO -->
+  <section id="manifesto">
+    <h2 class="section-title">Menos peças. Mais significado.</h2>
+    <p class="section-text">
+      A BISPO não segue tendências. Criamos produtos com identidade, propósito e limite.
+      Cada peça é numerada. Cada drop é final. Cada detalhe importa.
+    </p>
+  </section>
 
-  <body>
+  <!-- DROPS -->
+  <section id="drops">
+    <h2 class="section-title">Drops limitados</h2>
+    <p class="section-text">
+      Produções restritas a 30 unidades por modelo.  
+      Sem reposição. Sem excesso. Sem concessões.
+    </p>
+  </section>
 
-    <!-- HEADER -->
-    <header style="padding: 32px; display:flex; justify-content:space-between; align-items:center;">
-      <img
-        src="assets/logo-bispo-branca.png"
-        alt="BISPO"
-        style="height:40px;"
-      />
-      <nav style="display:flex; gap:24px; font-size:14px;">
-        <a href="#">Drop Atual</a>
-        <a href="#">Manifesto</a>
-        <a href="#">Sobre</a>
-        <a href="#">FAQ</a>
-      </nav>
-    </header>
+  <!-- FOOTER -->
+  <footer>
+    <!-- LOGO PRETA -->
+    <img src="assets/logo-bispo-preta.png" alt="BISPO Logo Preta">
+    <p>© BISPO — Todos os direitos reservados</p>
+  </footer>
 
-    <!-- HERO -->
-    <section style="padding:120px 32px; text-align:center;">
-      <h1 style="font-size:48px; font-weight:600;">
-        Design autoral.<br />
-        Nada além do essencial.
-      </h1>
-      <p style="margin-top:24px; font-size:16px; opacity:0.7;">
-        Camisas inspiradas no futebol.<br />
-        Criadas em edições limitadas.
-      </p>
-    </section>
-
-    <!-- LOGO PRETA (PARA FUNDOS CLAROS FUTUROS) -->
-    <section style="display:none;">
-      <img src="assets/logo-bispo-preta.png" alt="BISPO preta" />
-    </section>
-
-    <!-- APP ROOT (mantido para scripts TeleportHQ se existirem) -->
-    <div id="app"></div>
-
-  </body>
+</body>
 </html>
